@@ -5,7 +5,7 @@ import '../resources/quotes_fonts.dart';
 import '../resources/quotes_styles.dart';
 import '../resources/quotes_text_theme.dart';
 
-ThemeData bondDarkThemeData() {
+ThemeData quotesDarkThemeData() {
   return ThemeData(
     /// main color of the app
     primaryColor: QuotesColors.primary,

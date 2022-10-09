@@ -1,7 +1,8 @@
-import 'package:bond/features/auth/data/dto/user_dto.dart';
-import 'package:bond/features/auth/data/models/user.dart';
-import 'package:bond/features/auth/data/models/user_meta.dart';
+
 import 'package:one_studio_core/core.dart';
+import 'package:quotes/features/auth/data/dto/user_dto.dart';
+import 'package:quotes/features/auth/data/models/user.dart';
+import 'package:quotes/features/auth/data/models/user_meta.dart';
 
 class AuthRemoteDataSource extends DataSource {
   final ApiClient _client;

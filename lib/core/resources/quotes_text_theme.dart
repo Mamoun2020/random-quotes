@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:bond/core/resources/quotes_colors.dart';
-import 'package:bond/core/resources/quotes_fonts.dart';
+import 'package:quotes/core/resources/quotes_colors.dart';
+import 'quotes_fonts.dart';
 import 'quotes_styles.dart';
 
 class QuotesTextTheme extends TextTheme {

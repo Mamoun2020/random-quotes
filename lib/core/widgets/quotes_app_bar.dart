@@ -1,7 +1,7 @@
-import 'package:bond/core/resources/quotes_string.dart';
 import 'package:flutter/material.dart';
 
 import '../resources/quotes_colors.dart';
+import '../resources/quotes_string.dart';
 
 class QuoteAppBar extends StatelessWidget implements PreferredSize {
   const QuoteAppBar({

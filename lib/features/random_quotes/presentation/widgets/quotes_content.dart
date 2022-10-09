@@ -1,6 +1,6 @@
-import 'package:bond/core/resources/quotes_colors.dart';
-import 'package:bond/core/resources/quotes_string.dart';
 import 'package:flutter/material.dart';
+import 'package:quotes/core/resources/quotes_colors.dart';
+import 'package:quotes/core/resources/quotes_string.dart';
 
 
 class QuotesContent extends StatelessWidget {

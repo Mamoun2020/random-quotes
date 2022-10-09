@@ -1,7 +1,6 @@
 import 'dart:convert';
-
-import 'package:bond/features/auth/data/models/user.dart';
 import 'package:one_studio_core/core.dart';
+import 'package:quotes/features/auth/data/models/user.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthLocalDataSource extends AuthStore<User> {

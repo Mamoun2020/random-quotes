@@ -1,5 +1,5 @@
-name: bond
-description: Bond project.
+name: quotes
+description: random quotes simple project.
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -19,7 +19,7 @@ dependencies:
   auto_route: ^4.2.1
   flutter_svg: ^1.0.3
   intl: ^0.17.0
-
+  change_app_package_name: ^1.1.0
   # utils
   flutter_native_splash: ^2.2.8
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bond/core/resources/quotes_fonts.dart';
+import 'package:quotes/core/resources/quotes_fonts.dart';
 
 TextStyle _getTextStyle(
     double fontSize, String fontFamily, FontWeight fontWeight, Color color) {

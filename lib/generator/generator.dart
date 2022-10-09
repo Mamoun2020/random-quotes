@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:args/args.dart';
 import 'package:collection/collection.dart' show IterableExtension;
-import 'package:bond/generator/strings.dart';
+import 'package:quotes/generator/strings.dart';
 
 import 'console.dart';
 import 'menu.dart';

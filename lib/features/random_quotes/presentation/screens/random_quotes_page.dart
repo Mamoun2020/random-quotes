@@ -1,8 +1,8 @@
-import 'package:bond/core/resources/quotes_assets.dart';
-import 'package:bond/core/resources/quotes_string.dart';
-import 'package:bond/core/widgets/quotes_app_bar.dart';
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+import 'package:quotes/core/resources/quotes_assets.dart';
+import 'package:quotes/core/resources/quotes_string.dart';
+import 'package:quotes/core/widgets/quotes_app_bar.dart';
 import '../../../../core/resources/quotes_colors.dart';
 import '../widgets/quotes_content.dart';
 

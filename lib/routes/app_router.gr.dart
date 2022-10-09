@@ -13,21 +13,17 @@
 part of 'app_router.dart';
 
 class _$AppRouter extends RootStackRouter {
-  _$AppRouter(
-      {GlobalKey<NavigatorState>? navigatorKey, required this.authGuard})
-      : super(navigatorKey);
-
-  final AuthGuard authGuard;
+  _$AppRouter([GlobalKey<NavigatorState>? navigatorKey]) : super(navigatorKey);
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    RandomQuoteRoute.name: (routeData) {
-      return MaterialPageX<dynamic>(
-          routeData: routeData, child: const RandomQuotePage());
-    },
     HomeRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
           routeData: routeData, child: const HomePage());
+    },
+    RandomQuoteRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+          routeData: routeData, child: const RandomQuotePage());
     },
     LoginRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
@@ -37,18 +33,10 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   List<RouteConfig> get routes => [
-        RouteConfig(RandomQuoteRoute.name, path: '/', guards: [authGuard]),
         RouteConfig(HomeRoute.name, path: '/home-page'),
+        RouteConfig(RandomQuoteRoute.name, path: '/'),
         RouteConfig(LoginRoute.name, path: '/login-page')
       ];
-}
-
-/// generated route for
-/// [RandomQuotePage]
-class RandomQuoteRoute extends PageRouteInfo<void> {
-  const RandomQuoteRoute() : super(RandomQuoteRoute.name, path: '/');
-
-  static const String name = 'RandomQuoteRoute';
 }
 
 /// generated route for
@@ -57,6 +45,14 @@ class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute() : super(HomeRoute.name, path: '/home-page');
 
   static const String name = 'HomeRoute';
+}
+
+/// generated route for
+/// [RandomQuotePage]
+class RandomQuoteRoute extends PageRouteInfo<void> {
+  const RandomQuoteRoute() : super(RandomQuoteRoute.name, path: '/');
+
+  static const String name = 'RandomQuoteRoute';
 }
 
 /// generated route for
