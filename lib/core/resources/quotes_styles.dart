@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bond/core/resources/bond_fonts.dart';
+import 'package:bond/core/resources/quotes_fonts.dart';
 
 TextStyle _getTextStyle(
     double fontSize, String fontFamily, FontWeight fontWeight, Color color) {
@@ -14,17 +14,17 @@ TextStyle _getTextStyle(
 // Regular TextStyle
 TextStyle getTextStyle({required double fontSize, required Color color}) {
   return _getTextStyle(
-      fontSize, BondFontFamily.fontFamily, BondFontWeight.regular, color);
+      fontSize, QuotesFontFamily.fontFamily, QuotesFontWeight.regular, color);
 }
 
 // Medium TextStyle
 TextStyle getMediumStyle({required double fontSize, required Color color}) {
   return _getTextStyle(
-      fontSize, BondFontFamily.fontFamily, BondFontWeight.medium, color);
+      fontSize, QuotesFontFamily.fontFamily, QuotesFontWeight.medium, color);
 }
 
 // Bold TextStyle
 TextStyle getBoldStyle({required double fontSize, required Color color}) {
   return _getTextStyle(
-      fontSize, BondFontFamily.fontFamily, BondFontWeight.bold, color);
+      fontSize, QuotesFontFamily.fontFamily, QuotesFontWeight.bold, color);
 }
