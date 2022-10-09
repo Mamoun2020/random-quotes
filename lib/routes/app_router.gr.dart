@@ -21,6 +21,10 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    RandomQuoteRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+          routeData: routeData, child: const RandomQuotePage());
+    },
     HomeRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
           routeData: routeData, child: const HomePage());
@@ -33,15 +37,24 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   List<RouteConfig> get routes => [
-        RouteConfig(HomeRoute.name, path: '/', guards: [authGuard]),
+        RouteConfig(RandomQuoteRoute.name, path: '/', guards: [authGuard]),
+        RouteConfig(HomeRoute.name, path: '/home-page'),
         RouteConfig(LoginRoute.name, path: '/login-page')
       ];
 }
 
 /// generated route for
+/// [RandomQuotePage]
+class RandomQuoteRoute extends PageRouteInfo<void> {
+  const RandomQuoteRoute() : super(RandomQuoteRoute.name, path: '/');
+
+  static const String name = 'RandomQuoteRoute';
+}
+
+/// generated route for
 /// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
-  const HomeRoute() : super(HomeRoute.name, path: '/');
+  const HomeRoute() : super(HomeRoute.name, path: '/home-page');
 
   static const String name = 'HomeRoute';
 }

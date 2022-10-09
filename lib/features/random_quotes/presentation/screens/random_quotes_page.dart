@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import '../../../../core/resources/quotes_colors.dart';
 import '../widgets/quotes_content.dart';
 
-class RandomQuoteScreen extends StatefulWidget {
-  const RandomQuoteScreen({Key? key}) : super(key: key);
+class RandomQuotePage extends StatefulWidget {
+  const RandomQuotePage({Key? key}) : super(key: key);
 
   @override
-  State<RandomQuoteScreen> createState() => _QuoteScreenState();
+  State<RandomQuotePage> createState() => _QuoteScreenState();
 }
 
-class _QuoteScreenState extends State<RandomQuoteScreen> {
+class _QuoteScreenState extends State<RandomQuotePage> {
   @override
   void initState() {
     super.initState();
