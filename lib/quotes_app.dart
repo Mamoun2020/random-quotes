@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'core/theme/bond_light_theme_data.dart';
 import 'routes/app_router.dart';
 
-class BondApp extends StatelessWidget {
-  const BondApp({Key? key, required this.appRouter}) : super(key: key);
+class QuoteApp extends StatelessWidget {
+  const QuoteApp({Key? key, required this.appRouter}) : super(key: key);
 
   final AppRouter appRouter;
 

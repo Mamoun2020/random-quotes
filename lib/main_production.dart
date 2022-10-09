@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:one_studio_core/core.dart';
 
-import 'bond_app.dart';
+import 'quotes_app.dart';
 import 'injection_container.dart';
 
 Future<void> main() async {
@@ -13,5 +13,5 @@ Future<void> main() async {
   await EasyLocalization.ensureInitialized();
   await init();
   FlutterNativeSplash.remove();
-  runApp(BondApp(appRouter: sl<AppRouter>()));
+  runApp(QuoteApp(appRouter: sl<AppRouter>()));
 }
