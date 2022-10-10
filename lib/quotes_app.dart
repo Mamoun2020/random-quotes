@@ -1,10 +1,7 @@
 import 'dart:io';
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'core/theme/quotes_dark_theme_data.dart';
 import 'core/theme/quotes_light_theme_data.dart';
 import 'routes/app_router.dart';
 

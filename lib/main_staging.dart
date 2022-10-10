@@ -8,7 +8,6 @@ import 'quotes_app.dart';
 import 'injection_container.dart';
 
 Future<void> main() async {
-  FlutterNativeSplash.remove();
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await init();
