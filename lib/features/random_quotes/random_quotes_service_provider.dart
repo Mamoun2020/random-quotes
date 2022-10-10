@@ -6,13 +6,15 @@ import 'package:quotes/features/random_quotes/data/models/quote.dart';
 import 'package:quotes/features/random_quotes/data/repositories/random_quotes_repository.dart';
 
 import 'data/data_sources/random_quotes_remote_data_source.dart';
+import 'presentation/cubit/random_quotes_cubit.dart';
 
 class RandomQuotesServiceProvider extends ServiceProvider{
   @override
   Future<void> register(GetIt it) async{
    it.registerFactory(() => RandomQuotesLocalDataSource(it()));
    it.registerFactory(() => RandomQuotesRemoteDataSource(it()));
-   it.registerFactory(() => RandomQuotesRepository(it(),it(),it()));
+   it.registerLazySingleton(() => RandomQuotesRepository(it(),it(),it()));
+   it.registerFactory(() => RandomQuotesCubit(it(),it()));
   }
 
   @override
