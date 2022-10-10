@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:developer';
+
 import 'package:one_studio_core/core.dart';
 import 'package:quotes/features/random_quotes/data/models/quote.dart';
 import 'package:dio/dio.dart';
@@ -7,11 +10,11 @@ class RandomQuotesRemoteDataSource extends DataSource {
 
   RandomQuotesRemoteDataSource(this._client);
 
-  Future<SingleResponse<Quote>> quotes() async {
-    final Response response =
+  Future<Quote> quotes() async {
+    final response =
         await _client.get(RandomQuotesApis.quotes, headers: Api.headers());
 
-    return mapSingleResponse(response);
+      return Quote.fromJson(response.data);
   }
 }
 

@@ -21,6 +21,7 @@ dependencies:
   intl: ^0.17.0
   change_app_package_name: ^1.1.0
   internet_connection_checker: ^0.0.1+4
+  flutter_spinkit: ^5.1.0
   # utils
   flutter_native_splash: ^2.2.8
 

@@ -8,23 +8,19 @@ part 'random_quotes_state.dart';
 
 class RandomQuotesCubit extends Cubit<RandomQuotesState> {
   final RandomQuotesRepository _repository;
-  final Quote _quote;
-  RandomQuotesCubit(this._repository, this._quote)
-      : super(RandomQuotesInitial());
+  RandomQuotesCubit(this._repository) : super(RandomQuotesInitial());
 
   Future<void> getRandomQuote() async {
+    emit(RandomQuotesIsLoading());
     final response = await _repository.randomQuotes();
-    response.fold(
-        (failure) => emit(RandomQuotesError(msg: failure.toMessage())),
-        (quote) => emit(RandomQuotesLoaded(quote: quote)));
+    emit(response.fold((failure) => RandomQuotesError(msg: _mapFailureToMsg(failure)),
+        (quote) => RandomQuotesLoaded(quote: quote)));
   }
 
   String _mapFailureToMsg(Failure failure) {
     switch (failure.runtimeType) {
       case ServerFailure:
         return 'Server Failure';
-      case CacheFailure:
-        return 'Cache Failure';
       default:
         return 'Unexpected Error';
     }

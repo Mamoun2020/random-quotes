@@ -6,12 +6,18 @@ abstract class RandomQuotesState extends Equatable {
   List<Object> get props => [];
 }
 
-class RandomQuotesInitial extends RandomQuotesState {}
+class RandomQuotesInitial extends RandomQuotesState {
+  @override
+  List<Object> get props => [];
+}
 
-class RandomQuotesIsLoading extends RandomQuotesState{}
+class RandomQuotesIsLoading extends RandomQuotesState{
+  @override
+  List<Object> get props => [];
+}
 
 class RandomQuotesLoaded extends RandomQuotesState{
-  final SingleResponse<Quote> quote;
+  final Quote quote;
   const RandomQuotesLoaded({required this.quote});
   @override
   List<Object> get props => [quote];

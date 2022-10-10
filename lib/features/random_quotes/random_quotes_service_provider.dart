@@ -1,6 +1,8 @@
 
 import 'package:get_it/get_it.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:one_studio_core/core.dart';
+import 'package:quotes/core/network/network_info.dart';
 import 'package:quotes/features/random_quotes/data/data_sources/random_quotes_local_data_source.dart';
 import 'package:quotes/features/random_quotes/data/models/quote.dart';
 import 'package:quotes/features/random_quotes/data/repositories/random_quotes_repository.dart';
@@ -13,8 +15,8 @@ class RandomQuotesServiceProvider extends ServiceProvider{
   Future<void> register(GetIt it) async{
    it.registerFactory(() => RandomQuotesLocalDataSource(it()));
    it.registerFactory(() => RandomQuotesRemoteDataSource(it()));
-   it.registerLazySingleton(() => RandomQuotesRepository(it(),it(),it()));
-   it.registerFactory(() => RandomQuotesCubit(it(),it()));
+   it.registerLazySingleton (() => RandomQuotesRepository(it()));
+   it.registerFactory(() => RandomQuotesCubit(it()));
   }
 
   @override

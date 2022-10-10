@@ -172,6 +172,11 @@ class FirebaseAnalyticsProvider extends AnalyticsProvider {
           name: userPropertyKey, value: value.toString());
     }
   }
+
+  @override
+  void setUserId(int userId) {
+    // TODO: implement setUserId
+  }
 }
 
 extension FirebaseCartItem on EventItem {

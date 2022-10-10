@@ -3,6 +3,7 @@ import 'package:one_studio_core/core.dart';
 import 'package:quotes/core/app_analytics_providers/firebase_analytics_provider.dart';
 
 import '../features/auth/auth_service_provider.dart';
+import '../features/random_quotes/random_quotes_service_provider.dart';
 import '../providers/api_service_provider.dart';
 import '../providers/app_service_provider.dart';
 import '../providers/config_service_provider.dart';
@@ -16,6 +17,7 @@ final List<ServiceProvider> providers = [
   // Modules Service Providers
   AppServiceProvider(),
   AuthServiceProvider(),
+  RandomQuotesServiceProvider(),
 ];
 
 /// The list of app_analytics_providers that should be used to log analytics events.

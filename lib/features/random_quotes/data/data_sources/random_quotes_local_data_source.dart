@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:one_studio_core/core.dart';
+import 'package:quotes/core/error/exceptions.dart';
 import 'package:quotes/features/random_quotes/data/models/quote.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -14,11 +15,8 @@ class RandomQuotesLocalDataSource {
   SingleResponse<Quote> getLastRandomQuote() {
     final quotes = _sharedPreference
         .getString(RandomQuotesLocalDataSource.cachedRandomQuote);
+      return SingleResponse<Quote>.fromJson(json.decode(quotes ?? ''));
 
-    if (quotes == null) {
-      throw CacheException();
-    }
-    return SingleResponse<Quote>.fromJson(json.decode(quotes));
   }
 
   Future<void> cacheQuote(SingleResponse<Quote> quote) {

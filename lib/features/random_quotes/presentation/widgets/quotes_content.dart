@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:quotes/core/resources/quotes_colors.dart';
 import 'package:quotes/core/resources/quotes_string.dart';
+import 'package:quotes/features/random_quotes/data/models/quote.dart';
 
 
 class QuotesContent extends StatelessWidget {
   const QuotesContent({
-    Key? key,
+    Key? key, required this.quote,
   }) : super(key: key);
+  final Quote quote;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +20,7 @@ class QuotesContent extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            'quote.content',
+            quote.quote,
             maxLines: 10,
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -32,7 +34,7 @@ class QuotesContent extends StatelessWidget {
             height: 20,
           ),
           Text(
-            'quote.author',
+            quote.author,
             style: TextStyle(
               fontSize: 16,
               fontFamily: QuotesStrings.fontFamily,
