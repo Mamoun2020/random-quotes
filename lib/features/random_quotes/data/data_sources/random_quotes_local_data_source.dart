@@ -16,7 +16,7 @@ class RandomQuotesLocalDataSource {
         .getString(RandomQuotesLocalDataSource.cachedRandomQuote);
 
     if (quotes == null) {
-      throw CacheException(errors: {'CacheException':'something is wrong'});
+      throw CacheException();
     }
     return SingleResponse<Quote>.fromJson(json.decode(quotes));
   }
