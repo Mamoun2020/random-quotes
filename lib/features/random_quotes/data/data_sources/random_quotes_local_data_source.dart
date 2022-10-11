@@ -12,14 +12,13 @@ class RandomQuotesLocalDataSource {
 
   static var cachedRandomQuote = 'CACHED_RANDOM_QUOTE';
 
-  SingleResponse<Quote> getLastRandomQuote() {
+  Quote getLastRandomQuote() {
     final quotes = _sharedPreference
         .getString(RandomQuotesLocalDataSource.cachedRandomQuote);
-      return SingleResponse<Quote>.fromJson(json.decode(quotes ?? ''));
-
+    return Quote.fromJson(json.decode(quotes ?? ''));
   }
 
-  Future<void> cacheQuote(SingleResponse<Quote> quote) {
+  Future<void> cacheQuote(Quote quote) {
     return _sharedPreference.setString(
         RandomQuotesLocalDataSource.cachedRandomQuote, json.encode(quote));
   }

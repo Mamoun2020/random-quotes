@@ -15,8 +15,10 @@ class RandomQuotesServiceProvider extends ServiceProvider{
   Future<void> register(GetIt it) async{
    it.registerFactory(() => RandomQuotesLocalDataSource(it()));
    it.registerFactory(() => RandomQuotesRemoteDataSource(it()));
-   it.registerLazySingleton (() => RandomQuotesRepository(it()));
+   it.registerLazySingleton (() => RandomQuotesRepository(it(),it(),it()));
    it.registerFactory(() => RandomQuotesCubit(it()));
+   it.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(connectionChecker: it()));
+   it.registerLazySingleton(() => InternetConnectionChecker());
   }
 
   @override

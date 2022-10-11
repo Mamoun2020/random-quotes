@@ -14,7 +14,7 @@ class RandomQuotesRemoteDataSource extends DataSource {
     final response =
         await _client.get(RandomQuotesApis.quotes, headers: Api.headers());
 
-      return Quote.fromJson(response.data);
+    return Quote.fromJson(response.data);
   }
 }
 
