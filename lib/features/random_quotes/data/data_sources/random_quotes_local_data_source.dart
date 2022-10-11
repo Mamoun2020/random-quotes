@@ -1,7 +1,5 @@
 import 'dart:convert';
 
-import 'package:one_studio_core/core.dart';
-import 'package:quotes/core/error/exceptions.dart';
 import 'package:quotes/features/random_quotes/data/models/quote.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

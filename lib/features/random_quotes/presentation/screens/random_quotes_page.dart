@@ -43,19 +43,19 @@ class _QuoteScreenState extends State<RandomQuotePage> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: BlocBuilder<RandomQuotesCubit, RandomQuotesState>(
               builder: (_, state) {
-                log(state.toString(),name:'999');
+                log(state.toString(), name: '999');
                 if (state is RandomQuotesIsLoading) {
-                  log(state.toString(),name:'999');
+                  log(state.toString(), name: '999');
                   return Center(
                     child: SpinKitFadingCircle(
                       color: QuotesColors.primary,
                     ),
                   );
                 } else if (state is RandomQuotesError) {
-                  log(state.toString(),name:'999');
+                  log(state.toString(), name: '999');
                   return const Text('RandomQuotesError');
                 } else if (state is RandomQuotesLoaded) {
-                  log(state.toString(),name:'999');
+                  log(state.toString(), name: '999');
 
                   return Column(
                     children: [

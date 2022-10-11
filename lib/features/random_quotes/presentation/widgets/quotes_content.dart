@@ -3,10 +3,10 @@ import 'package:quotes/core/resources/quotes_colors.dart';
 import 'package:quotes/core/resources/quotes_string.dart';
 import 'package:quotes/features/random_quotes/data/models/quote.dart';
 
-
 class QuotesContent extends StatelessWidget {
   const QuotesContent({
-    Key? key, required this.quote,
+    Key? key,
+    required this.quote,
   }) : super(key: key);
   final Quote quote;
   @override

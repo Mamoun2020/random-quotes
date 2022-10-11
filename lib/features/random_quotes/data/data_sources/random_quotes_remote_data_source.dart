@@ -1,9 +1,6 @@
-import 'dart:convert';
-import 'dart:developer';
 
 import 'package:one_studio_core/core.dart';
 import 'package:quotes/features/random_quotes/data/models/quote.dart';
-import 'package:dio/dio.dart';
 
 class RandomQuotesRemoteDataSource extends DataSource {
   final ApiClient _client;
