@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,6 +10,7 @@ import 'package:quotes/core/widgets/quotes_app_bar.dart';
 import 'package:quotes/features/random_quotes/presentation/cubit/random_quotes_cubit.dart';
 import '../../../../core/resources/quotes_colors.dart';
 import '../widgets/quotes_content.dart';
+import 'package:quotes/core/widgets/error_widget.dart' as error_widget;
 
 class RandomQuotePage extends StatefulWidget implements AutoRouteWrapper {
   const RandomQuotePage({Key? key}) : super(key: key);
@@ -53,7 +53,7 @@ class _QuoteScreenState extends State<RandomQuotePage> {
                   );
                 } else if (state is RandomQuotesError) {
                   log(state.toString(), name: '999');
-                  return const Text('RandomQuotesError');
+                  return const error_widget.ErrorWidget();
                 } else if (state is RandomQuotesLoaded) {
                   log(state.toString(), name: '999');
 

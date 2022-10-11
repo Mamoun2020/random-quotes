@@ -14,7 +14,7 @@ class QuotesTextTheme extends TextTheme {
 
   @override
   TextStyle get headlineMedium => getMediumStyle(
-      fontSize: QuotesFontSize.s16, color: QuotesColors.primary);
+      fontSize: QuotesFontSize.s18, color: QuotesColors.primary);
 
   @override
   TextStyle get headlineSmall => getTextStyle(
