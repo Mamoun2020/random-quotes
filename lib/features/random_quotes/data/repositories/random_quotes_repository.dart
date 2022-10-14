@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:one_studio_core/core.dart';
-import 'package:quotes/core/error/exceptions.dart';
 import 'package:quotes/features/random_quotes/data/data_sources/random_quotes_local_data_source.dart';
 import 'package:quotes/features/random_quotes/data/data_sources/random_quotes_remote_data_source.dart';
 import 'package:quotes/features/random_quotes/data/models/quote.dart';
